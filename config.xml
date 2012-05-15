@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.greggtwep16.test"
+	version 	= "1.0.0">
+
+	<name>greggtwep16test</name>
+
+	<description>
+		Test project
+	</description>
+
+	<author 
+		email="gregfriend1@hotmail.com">
+		Greg Friend
+	</author>
+
+	<icon src="ApplicationIcon.png" gap:role="default" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
+	<preference name="orientation" value="portrait" />
+</widget>
