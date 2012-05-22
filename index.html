@@ -12,7 +12,7 @@
 	  <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
     </head>
     <body onload="init();" id="stage" class="theme">
-      <div data-role="page">
+      <div data-role="page" id ="one">
 
 	<div data-role="header">
 		<h1>Tiltified</h1>
@@ -27,12 +27,21 @@
             <dt>Z:</dt>
             <dd id="z"></dd>
           </dl>
-          <a href="game/game.html" data-role="button" data-icon="star">Play Game</a>
+          <a href="#two" data-role="button" data-icon="star">Play Game</a>
           <a href="#" data-role="button" data-icon="star" onclick="quit();">Quit</a>
           <a href="#" data-role="button" data-icon="star" onclick="toggleAccel();">Toggle Accelerometer</a>		
 	</div><!-- /content -->
 
       </div><!-- /page -->
+
+      <div data-role="page" id="two">
+
+	<div data-role="content">	
+		<a href="#one" data-role="button" data-icon="star">Back</a>	
+	</div><!-- /content -->
+
+      </div><!-- /page -->
+
 
     </body>
 </HTML>
