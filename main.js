@@ -143,4 +143,24 @@ function Play_Game() {
 
 function init() {
     document.addEventListener("deviceready", deviceInfo, true);
+    
+        canvas = document.getElementById('canvas');
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx = canvas.getContext('2d');
+    // This sets the fill color to red
+    ctx.fillStyle = "rgb(200,0,0)";
+    // This sets starting point for some variables for demonstration purposes
+    x = 50;
+    y = 50;
+    width = 10;
+    height = 10;
+    direction = true;
+    
+    //assuming normal horizontal is 480
+    xmultiplier = canvas.width / 480
+    
+    //assuming normal vertical is 800
+    
+    ymultiplier = canvas.height / 800
 }
