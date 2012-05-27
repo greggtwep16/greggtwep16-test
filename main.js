@@ -1,13 +1,107 @@
 var deviceInfo = function() {
 };
 
+//global vars
+var canvas;
+var ctx;
+var x;
+var y;
+var width;
+var height;
+var directionx;
+var directiony;
+var xmultiplier;
+var ymultiplier;
+var curTime = 0;
+var prevTime = 0;
+var delta;
+var accelerationWatch = null;
+
+//game page
+
+
+
+function draw_Scene() {
+    //update the visuals in the canvas
+    //assume canvas is supported
+
+       // This draws a square with the parameters from the variables set above
+	   if (directionx == true)
+	   {
+
+	   x += xmultiplier;
+	   }
+	   else {
+	   x-= xmultiplier;
+	   }
+	   if (directiony == true)
+	   {
+	   y+= ymultiplier;
+	   }
+	   else {
+	   y-= ymultiplier;
+	   }
+
+	   if (x>canvas.width) {
+		   directionx=false;
+	   }
+		  if (x<0) {
+		   directionx=true;
+	   }
+
+	   if (y>canvas.height) {
+		   directiony=false;
+	   }
+	   if (y<0) {
+		   directiony=true;
+	   }
+
+	   //clear screen
+	   ctx.clearRect(0,0,canvas.width,canvas.height);
+
+	   //draw square
+	   ctx.fillRect(x, y, width, height);
+
+    
+    
+    
+}
+
+function game_Loop() {
+    //call to timer
+    
+
+    //right now only calls draw_scene but might want to do other items
+	setInterval(draw_Scene, 13);
+
+	//call to timer
+
+	//function figure out framerate
+
+	  // delta = curTime-prevTime;
+
+	  //  curTime= Date.now();
+
+	    //navigator.notification.alert("curTime= " + curTime + " prevTime= " + prevTime);
+	    //navigator.notification.alert("canvas width= " + canvas.width);
+
+    
+}
+
+function update_Controls() {
+    //get updated controls (accelerometer)
+    
+}
+
+//main page 
+
 function roundNumber(num) {
     var dec = 3;
     var result = Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
     return result;
 }
 
-var accelerationWatch = null;
+
 
 function updateAcceleration(a) {
     document.getElementById('x').innerHTML = roundNumber(a.x);
