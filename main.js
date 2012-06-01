@@ -21,7 +21,7 @@ var accelerationWatch = null;
 
 
 
-function draw_Scene () {
+function draw_Scene() {
     //update the visuals in the canvas
     //assume canvas is supported
 
@@ -67,7 +67,7 @@ function draw_Scene () {
     
 }
 
-function game_Loop () {
+function game_Loop() {
     //call to timer
     
 
@@ -88,7 +88,7 @@ function game_Loop () {
     
 }
 
-function update_Controls () {
+function update_Controls() {
     //get updated controls (accelerometer)
     
 }
@@ -135,13 +135,13 @@ function quit() {
 }
 
 
-function Play_Game () {
+function Play_Game() {
     alert("This is where I would play the game");
 }
 
 
 
-function init () {
+function init() {
     document.addEventListener("deviceready", deviceInfo, true);
     
         canvas = document.getElementById('canvas');
