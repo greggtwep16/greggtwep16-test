@@ -1,4 +1,4 @@
-var deviceInfo = function() {
+var deviceInfo = function () {
 };
 
 //global vars
@@ -21,7 +21,7 @@ var accelerationWatch = null;
 
 
 
-function draw_Scene() {
+function draw_Scene () {
     //update the visuals in the canvas
     //assume canvas is supported
 
@@ -67,7 +67,7 @@ function draw_Scene() {
     
 }
 
-function game_Loop() {
+function game_Loop () {
     //call to timer
     
 
@@ -88,7 +88,7 @@ function game_Loop() {
     
 }
 
-function update_Controls() {
+function update_Controls () {
     //get updated controls (accelerometer)
     
 }
@@ -109,7 +109,7 @@ function updateAcceleration(a) {
     document.getElementById('z').innerHTML = roundNumber(a.z);
 }
 
-var toggleAccel = function() {
+var toggleAccel = function () {
     if (accelerationWatch !== null) {
         navigator.accelerometer.clearWatch(accelerationWatch);
         updateAcceleration({
@@ -135,13 +135,13 @@ function quit() {
 }
 
 
-function Play_Game() {
+function Play_Game () {
     alert("This is where I would play the game");
 }
 
 
 
-function init() {
+function init () {
     document.addEventListener("deviceready", deviceInfo, true);
     
         canvas = document.getElementById('canvas');
@@ -155,12 +155,13 @@ function init() {
     y = 50;
     width = 10;
     height = 10;
-    direction = true;
+    directionx = true;
+    directiony = true;
     
     //assuming normal horizontal is 480
-    xmultiplier = canvas.width / 480
+    xmultiplier = canvas.width / 480;
     
     //assuming normal vertical is 800
     
-    ymultiplier = canvas.height / 800
+    ymultiplier = canvas.height / 800;
 }
